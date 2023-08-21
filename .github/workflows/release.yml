@@ -1,7 +1,13 @@
 name: Release
 
 on:
-  workflow_dispatch
+  workflow_dispatch:
+    inputs:
+      version: 
+        description: '版本号'
+        required: true
+        default: '0.0.0'
+
       
 jobs:
   release:
@@ -10,7 +16,8 @@ jobs:
     env:
       Project_Directory: DanmakuFrostMaster
       Project_File_Name: DanmakuFrostMaster.csproj
-      Nuget_File_Name: DanmakuFrostMaster.csproj
+      Nuget_File_Name: DanmakuFrostMaster.nuspec
+      GITHUB_TOKEN: ${{ secrets.RELEASE_GITHUB_TOKEN  }}
       nuget_push_key: ${{ secrets.NUGET_PUSH_KEY }}
 
     steps:
@@ -38,10 +45,21 @@ jobs:
       uses: NuGet/setup-nuget@v1.2.0
         
     - name: Build
-      run: msbuild .\$env:Project_Directory\$env:Project_File_Name
+      run: msbuild .\$env:Project_Directory\$env:Project_File_Name /restore
       
     - name: Create nupkg
       run: nuget pack .\$env:Project_Directory\$env:Nuget_File_Name
 
     - name: Push NugetServer
-      run: dotnet nuget push -s http://nuget.muyan233.top:681/v3/index.json -k Fiy3j26z4SVZiatxvoTV .\DanmakuFrostMaster.muyan.1.0.0.nupkg
+      run: dotnet nuget push -s http://nuget.muyan233.top:681/v3/index.json -k $env:nuget_push_key .\DanmakuFrostMaster.muyan.${{github.event.inputs.version}}.nupkg
+
+    - name: Update release asset
+      id: upload-release-asset
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.RELEASE_GITHUB_TOKEN  }}
+      with:
+        upload_url: ${{ steps.release-drafter.outputs.upload_url }}
+        asset_path: .\DanmakuFrostMaster.muyan.${{github.event.inputs.version}}.nupkg
+        asset_name: .\DanmakuFrostMaster.muyan.${{github.event.inputs.version}}.nupkg
+        asset_content_type: application/zip
