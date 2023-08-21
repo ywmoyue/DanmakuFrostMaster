@@ -1,11 +1,16 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30611.23
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DanmakuFrostMasterDemo", "DanmakuFrostMasterDemo.csproj", "{0C973FF4-3131-4599-9BA4-207ED730E00F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DanmakuFrostMaster", "..\DanmakuFrostMaster\DanmakuFrostMaster.csproj", "{6F3A0BE3-1C98-4489-96D8-33018A6F5BD4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "解决方案项", "解决方案项", "{DF8DB8B0-ED75-4048-A667-EFF16562861F}"
+	ProjectSection(SolutionItems) = preProject
+		..\.github\workflows\release.yml = ..\.github\workflows\release.yml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

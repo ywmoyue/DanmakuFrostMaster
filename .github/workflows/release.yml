@@ -1,0 +1,47 @@
+name: Release
+
+on:
+  workflow_dispatch
+      
+jobs:
+  release:
+    runs-on: windows-latest
+
+    env:
+      Project_Directory: DanmakuFrostMaster
+      Project_File_Name: DanmakuFrostMaster.csproj
+      Nuget_File_Name: DanmakuFrostMaster.csproj
+      nuget_push_key: ${{ secrets.NUGET_PUSH_KEY }}
+
+    steps:
+    
+    - name: Configure Pagefile
+      uses: al-cheb/configure-pagefile-action@v1.2
+      with:
+        minimum-size: 32GB
+        maximum-size: 32GB
+        disk-root: "C:"
+
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+
+    - uses: release-drafter/release-drafter@v5
+      name: Create release draft
+      id: release-drafter
+
+    - name: Setup MSBuild.exe
+      uses: microsoft/setup-msbuild@v1.0.3
+
+    - name: Setup NuGet.exe for use with actions          
+      uses: NuGet/setup-nuget@v1.2.0
+        
+    - name: Build
+      run: msbuild .\$env:Project_Directory\$env:Project_File_Name
+      
+    - name: Create nupkg
+      run: nuget pack .\$env:Project_Directory\$env:Nuget_File_Name
+
+    - name: Push NugetServer
+      run: dotnet nuget push -s http://nuget.muyan233.top:681/v3/index.json -k Fiy3j26z4SVZiatxvoTV .\DanmakuFrostMaster.muyan.1.0.0.nupkg

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+    <id>DanmakuFrostMaster.muyan</id>
+    <version>1.0.0</version>
+    <title>DanmakuFrostMaster</title>
+    <authors>muyan</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <!-- <icon>icon.png</icon> -->
+    <projectUrl>https://github.com/ywmoyue/DanmakuFrostMaster</projectUrl>
+    <description>
+		UWP开源弹幕引擎·寒霜弹幕使 ～
+		Fork from https://github.com/cotaku/DanmakuFrostMaster
+		original author: https://github.com/cotaku
+	</description>
+    <releaseNotes>Summary of changes made in this release of the package.</releaseNotes>
+    <copyright>Copyright 2023</copyright>
+    <tags>Danmaku Danmu</tags>
+  </metadata>
+  <files>
+    <file src=".\bin\Debug\DanmakuFrostMaster.dll" target="lib\uap10.0"></file>
+    <file src=".\bin\Debug\DanmakuFrostMaster.pdb" target="lib\uap10.0"></file>
+    <file src=".\bin\Debug\DanmakuFrostMaster.pri" target="lib\uap10.0"></file>
+  </files>
+</package>
