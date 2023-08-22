@@ -93,6 +93,11 @@ namespace Atelier39
             _render.SetIsTextBold(value);
         }
 
+        public void SetDanmakuFontSizeOffset(int value)
+        {
+            _render.SetDanmakuFontSizeOffset(value);
+        }
+        
         public void SetDanmakuFontSizeOffset(DanmakuFontSize value)
         {
             _render.SetDanmakuFontSizeOffset(value);

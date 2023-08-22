@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<package >
+<package>
   <metadata>
     <id>DanmakuFrostMaster.muyan</id>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <title>DanmakuFrostMaster</title>
     <authors>muyan</authors>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -10,10 +10,10 @@
     <!-- <icon>icon.png</icon> -->
     <projectUrl>https://github.com/ywmoyue/DanmakuFrostMaster</projectUrl>
     <description>
-		UWP开源弹幕引擎·寒霜弹幕使 ～
-		Fork from https://github.com/cotaku/DanmakuFrostMaster
-		original author: https://github.com/cotaku
-	</description>
+      UWP开源弹幕引擎·寒霜弹幕使 ～
+      Fork from https://github.com/cotaku/DanmakuFrostMaster
+      original author: https://github.com/cotaku
+    </description>
     <releaseNotes>Summary of changes made in this release of the package.</releaseNotes>
     <copyright>Copyright 2023</copyright>
     <tags>Danmaku Danmu</tags>

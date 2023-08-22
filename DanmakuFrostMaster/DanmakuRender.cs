@@ -140,6 +140,11 @@ namespace Atelier39
             _textBold = value;
         }
 
+        public void SetDanmakuFontSizeOffset(int value)
+        { 
+            _danmakuFontSizeOffset = value;
+        }
+
         public void SetDanmakuFontSizeOffset(DanmakuFontSize value)
         {
             if (value >= DanmakuFontSize.Smallest && value <= DanmakuFontSize.Largest)

@@ -66,6 +66,9 @@ namespace Atelier39
         public Color TextColor = Colors.White;
         public Color OutlineColor = Colors.Black;
 
+        public int Weight;
+        public string MidHash;
+
         #region For Advanced mode
 
         public float StartX;
