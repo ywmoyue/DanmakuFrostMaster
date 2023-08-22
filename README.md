@@ -1,6 +1,6 @@
 > 本仓库为Fork仓库
-> 原版本 https://github.com/cotaku/DanmakuFrostMaster
-> 原作者 https://github.com/cotaku
+> - 原版本 https://github.com/cotaku/DanmakuFrostMaster
+> - 原作者 https://github.com/cotaku
 
 # DanmakuFrostMaster
 UWP开源弹幕引擎·寒霜弹幕使 ～
