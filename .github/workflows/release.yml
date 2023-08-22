@@ -58,7 +58,7 @@ jobs:
       run: nuget pack .\$env:Project_Directory\$env:Nuget_File_Name
 
     - name: Push NugetServer
-      run: dotnet nuget push -s http://nuget.muyan233.top:681/v3/index.json -k $env:nuget_push_key .\DanmakuFrostMaster.muyan.${{github.event.inputs.version}}.nupkg
+      run: dotnet nuget push -s https://api.nuget.org/v3/index.json -k $env:nuget_push_key .\DanmakuFrostMaster.muyan.${{github.event.inputs.version}}.nupkg
 
     - name: Update release asset
       id: upload-release-asset
