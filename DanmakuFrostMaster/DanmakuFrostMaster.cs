@@ -270,6 +270,7 @@ namespace Atelier39
         public void SetDanmakuList(List<DanmakuItem> danmakuList)
         {
             Clear();
+            _lastIndex = 0;
             _danmakuList = danmakuList ?? new List<DanmakuItem>();
         }
 
