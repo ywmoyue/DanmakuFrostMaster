@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package>
+  <metadata>
+    <id>DanmakuFrostMaster.Fork.WinUI</id>
+    <version>1.0.2</version>
+    <title>DanmakuFrostMaster.Fork.WinUI</title>
+    <authors>ywmoyue</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <!-- <icon>icon.png</icon> -->
+    <projectUrl>https://github.com/ywmoyue/DanmakuFrostMaster</projectUrl>
+    <description>
+      UWP开源弹幕引擎·寒霜弹幕使 ～
+Fork from https://github.com/cotaku/DanmakuFrostMaster
+original author: https://github.com/cotaku
+    </description>
+    <releaseNotes>Summary of changes made in this release of the package.</releaseNotes>
+    <copyright>Copyright 2023</copyright>
+    <tags>Danmaku Danmu</tags>
+    <dependencies>
+      <group targetFramework="net8.0-windows10.0.19041.0">
+        <dependency id="Microsoft.WindowsAppSDK" version="1.0.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src=".\bin\Debug\net8.0-windows10.0.19041.0\DanmakuFrostMaster.WinUI.dll"
+      target="lib\net8.0-windows10.0.19041.0"></file>
+    <file src=".\bin\Debug\net8.0-windows10.0.19041.0\DanmakuFrostMaster.WinUI.pdb"
+      target="lib\net8.0-windows10.0.19041.0"></file>
+    <file src=".\bin\Debug\net8.0-windows10.0.19041.0\DanmakuFrostMaster.WinUI.pri"
+      target="lib\net8.0-windows10.0.19041.0"></file>
+  </files>
+</package>
