@@ -1,0 +1,27 @@
+{
+  "name": "danmaku-frost-master",
+  "version": "1.0.0",
+  "description": "JavaScript port of DanmakuFrostMaster - an open-source danmaku (bullet comment) rendering engine using HTML5 Canvas",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "src/"
+  ],
+  "scripts": {
+    "test": "node test/test.js"
+  },
+  "keywords": [
+    "danmaku",
+    "bullet-comment",
+    "canvas",
+    "bilibili",
+    "subtitle",
+    "animation"
+  ],
+  "author": "DanmakuFrostMaster contributors",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ywmoyue/DanmakuFrostMaster"
+  }
+}
